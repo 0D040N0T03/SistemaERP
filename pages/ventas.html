@@ -1,0 +1,80 @@
+<section id="pedidos" class="admin-section">
+  <div class="toolbar">
+    <div>
+      <h2>Pedidos</h2>
+      <p class="muted">Registro de pedidos generados por caja y estados operativos.</p>
+    </div>
+    <div class="filters">
+      <label>Estado
+        <select><option>Todos</option><option>Pendiente</option><option>Preparando</option><option>Atendido</option><option>Anulado</option></select>
+      </label>
+      <label>Fecha
+        <input type="date">
+      </label>
+    </div>
+  </div>
+  <div class="card table-card">
+    <table>
+      <thead>
+        <tr><th>ID</th><th>Fecha</th><th>Cliente</th><th>Telefono</th><th>Cajero</th><th>Estado</th><th>Subtotal</th><th>Total</th><th>Acciones</th></tr>
+      </thead>
+      <tbody id="ordersTable"></tbody>
+    </table>
+  </div>
+  <div id="orderDetail" class="detail-box hidden"></div>
+</section>
+
+<section id="clientes" class="admin-section">
+  <div class="toolbar">
+    <div>
+      <h2>Clientes</h2>
+      <p class="muted">Clientes registrados desde pedidos del POS.</p>
+    </div>
+    <button class="btn btn-secondary" type="button">Nuevo cliente</button>
+  </div>
+  <div class="card table-card">
+    <table>
+      <thead><tr><th>ID</th><th>Nombre</th><th>Telefono</th><th>Pedidos</th><th>Acciones</th></tr></thead>
+      <tbody id="customersTable"></tbody>
+    </table>
+  </div>
+</section>
+
+<section id="boletas" class="admin-section">
+  <div class="toolbar">
+    <div>
+      <h2>Boletas</h2>
+      <p class="muted">Comprobantes generados automaticamente al registrar el pedido.</p>
+    </div>
+    <div class="filters">
+      <label>Metodo
+        <select><option>Todos</option><option>Efectivo</option><option>Tarjeta</option><option>Yape</option><option>Plin</option></select>
+      </label>
+      <label>Fecha
+        <input type="date">
+      </label>
+    </div>
+  </div>
+  <div class="card table-card">
+    <table>
+      <thead><tr><th>Nro boleta</th><th>Pedido</th><th>Metodo</th><th>Subtotal</th><th>IGV</th><th>Total</th></tr></thead>
+      <tbody id="ticketsTable"></tbody>
+    </table>
+  </div>
+</section>
+
+<section id="metodos-pago" class="admin-section">
+  <div class="toolbar">
+    <div>
+      <h2>Metodos de pago</h2>
+      <p class="muted">Valores esperados: Efectivo, Tarjeta, Yape y Plin.</p>
+    </div>
+    <button class="btn btn-secondary" type="button">Nuevo metodo</button>
+  </div>
+  <div class="card table-card">
+    <table>
+      <thead><tr><th>ID</th><th>Descripcion</th><th>Estado</th><th>Acciones</th></tr></thead>
+      <tbody id="paymentsTable"></tbody>
+    </table>
+  </div>
+</section>
